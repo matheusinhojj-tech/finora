@@ -1,0 +1,215 @@
+
+
+/* ==========================================
+   CARDS FINANCEIROS — FINORA
+   ========================================== */
+
+.resume {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+}
+
+/* Estrutura base dos cards */
+
+.card-resume {
+    position: relative;
+    min-width: 0;
+    min-height: 155px;
+    padding: 23px 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border: 1px solid transparent;
+    border-radius: 21px;
+
+    box-shadow: 0 7px 18px rgba(27, 38, 65, 0.09);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.card-resume:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(27, 38, 65, 0.13);
+}
+
+/* Textos */
+
+.card-label {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.card-value {
+    margin: 24px 0 0;
+
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1.1px;
+
+    overflow-wrap: anywhere;
+    font-variant-numeric: tabular-nums;
+}
+
+/* ==========================================
+   RECEITAS — VERDE
+   ========================================== */
+
+.card-bg-green {
+    background: #e8f6ef;
+    border-color: #e1f1e8;
+}
+
+.card-bg-green .card-label,
+.card-bg-green .card-value {
+    color: #006341;
+}
+
+.box-bg-green {
+    background: #087b52;
+    color: #ffffff;
+}
+
+/* ==========================================
+   DESPESAS — VERMELHO
+   ========================================== */
+
+.card-bg-red {
+    background: #fceded;
+    border-color: #f9e6e6;
+}
+
+.card-bg-red .card-label,
+.card-bg-red .card-value {
+    color: #a51e18;
+}
+
+.box-bg-red {
+    background: #bb211b;
+    color: #ffffff;
+}
+
+/* ==========================================
+   SALDO — AZUL
+   ========================================== */
+
+.card-bg-blue {
+    background: #eef0fc;
+    border-color: #e7eaff;
+}
+
+.card-bg-blue .card-label,
+.card-bg-blue .card-value {
+    color: #172f91;
+}
+
+.box-bg-blue {
+    background: #3949d6;
+    color: #ffffff;
+}
+
+/* ==========================================
+   ÍCONES
+   ========================================== */
+
+.icon-box {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+}
+
+.icon-box .material-symbols-outlined {
+    font-size: 31px;
+    font-weight: 500;
+    line-height: 1;
+    color: #fff;
+}
+
+/* ==========================================
+   TABLETS
+   ========================================== */
+
+@media (max-width: 1000px) {
+    .resume {
+        gap: 16px;
+    }
+
+    .card-resume {
+        min-height: 140px;
+        padding: 20px;
+    }
+
+    .card-label {
+        font-size: 17px;
+    }
+
+    .card-value {
+        font-size: 30px;
+        letter-spacing: -0.6px;
+    }
+
+    .icon-box {
+        top: 20px;
+        right: 20px;
+        width: 48px;
+        height: 48px;
+    }
+
+    .icon-box .material-symbols-outlined {
+        font-size: 26px;
+    }
+}
+
+/* ==========================================
+   CELULARES
+   ========================================== */
+
+@media (max-width: 650px) {
+    .resume {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .card-resume {
+        min-height: 135px;
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .card-label {
+        font-size: 16px;
+    }
+
+    .card-value {
+        margin-top: 20px;
+        font-size: 30px;
+    }
+
+    .icon-box {
+        top: 18px;
+        right: 18px;
+        width: 45px;
+        height: 45px;
+        border-radius: 12px;
+    }
+
+    .icon-box .material-symbols-outlined {
+        font-size: 25px;
+    }
+}

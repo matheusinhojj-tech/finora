@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+        <link rel="stylesheet" href="assets/css/index.css">
+        <title>Minhas finanças</title>
+    </head>
+
+    <body onload="buscarDados()">
+        <div id="content">
+            <main>
+
+                <header>
+                    <img src="assets/img/logo.png" alt="finora">
+                    <a href="novo-lancamento.html" class="btn btn-primary">
+                        <span class="material-symbols-outlined icon">add</span>
+                        Novo lançamento
+                    </a>
+                </header>
+
+                <section class="period">
+                    <select class="select-lg" name="mes" id="mes" id="mes">
+                        <option value="1">Janeiro</option>
+                        <option value="2">Fevereiro</option>
+                        <option value="3">Março</option>
+                    </select>
+                    <select class="select-lg" name="ano" id="ano">
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                    </select>
+                </section>
+
+                <section class="resume">
+                    <div class="card-resume card-bg-green">
+                        <div class="icon-box box-bg-green">
+                            <span class="material-symbols-outlined">arrow_outward</span>
+                        </div>
+                        <p class="card-label">Receitas</p>
+                        <h1 class="card-value">R$ 100.00</h1>
+                    </div>
+                    <div class="card-resume card-bg-red">
+                        <div class="icon-box box-bg-red">
+                            <span class="material-symbols-outlined">south_east</span>
+                        </div>
+                        <p class="card-label">Despesas</p>
+                        <h1 class="card-value">R$ 500.00</h1>
+                    </div>
+                    <div class="card-resume card-bg-blue">
+                        <div class="icon-box box-bg-blue">
+                            <span class="material-symbols-outlined">wallet</span>
+                        </div>
+                        <p class="card-label">Saldo</p>
+                        <h1 class="card-value">R$ 1221,07</h1>
+                    </div>
+                </section>
+
+                <section class="progress-bar">
+                    <div class="progress-box">
+                        <div class="percent"></div>
+                    </div>
+                    <p>
+                        <strong id="usuario">Usuário,</strong> você consumiu
+                        <strong id="percentual-salario">25%</strong> da sua renda de
+                        <strong id="renda">R$ 1621,07</strong>
+                        <a href="renda.html" class="btn-icon">
+                            <span class="material-symbols-outlined">edit_square</span>           
+                        </a>
+                    </p>
+                </section>
+
+                <section class="transactions">
+                    <div class="table-header">
+                        <h2>Lançamentos</h2>
+                        <div class="filters">
+                            <button type="button" class="btn btn-filter">
+                                Todos          
+                            </button>
+                            <button type="button" class="btn btn-filter">
+                                Receita           
+                            </button>
+                            <button type="button" class="btn btn-filter">
+                                Despesas   
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="table-box">
+
+                        <table id="lancamentos">
+                            <tr>
+                                <td class="cell-sm">
+                                    <div class="avatar avatar-red">L</div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <p>Ingressos para o cinema</p>
+                                        <span>Lazer &middot; 05/11</span>
+                                    </div>
+                                </td>
+                                <td class="cell-md currency-red">
+                                    <span class="material-symbols-outlined">arrow_downward</span>
+                                    R$ 79.90                                                  
+                                </td>
+                                <td class="cell-sm">
+                                    <button type="button" class="btn-icon">
+                                        <span class="material-symbols-outlined">delete</span>           
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="avatar avatar-red">C</div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <p>Fatura Nubank</p>
+                                        <span>Cartão de crédito &middot; 07/11</span>
+                                    </div>
+                                </td>
+                                <td class="cell-md currency-red">
+                                    <span class="material-symbols-outlined">arrow_downward</span>
+                                    R$ 79.90                                                  
+                                </td>
+                                <td>
+                                    <button type="button" class="btn-icon">
+                                        <span class="material-symbols-outlined">delete</span>           
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="avatar avatar-red">O</div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <p>Seguro do carro</p>
+                                        <span>Outros &middot; 11/11</span>
+                                    </div>
+                                </td>
+                                <td class="cell-md currency-red">
+                                    <span class="material-symbols-outlined">arrow_downward</span>
+                                    R$ 349.90                                                  
+                                </td>
+                                <td>
+                                    <button type="button" class="btn-icon">
+                                        <span class="material-symbols-outlined">delete</span>           
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="avatar avatar-red">C</div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <p>Conta de Luz</p>
+                                        <span>Contas de casa &middot; 15/11</span>
+                                    </div>
+                                </td>
+                                <td class="cell-md currency-red">
+                                    <span class="material-symbols-outlined">arrow_downward</span>
+                                    R$ 79.90                                                  
+                                </td>
+                                <td>
+                                    <button type="button" class="btn-icon">
+                                        <span class="material-symbols-outlined">delete</span>           
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="avatar avatar-green">R</div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <p>Corridas de Uber</p>
+                                        <span>Renda extra &middot; 25/11</span>
+                                    </div>
+                                </td>
+                                <td class="cell-md currency-green">
+                                    <span class="material-symbols-outlined">arrow_upward</span>
+                                    R$ 100.00                                                  
+                                </td>
+                                <td>
+                                    <button type="button" class="btn-icon">
+                                        <span class="material-symbols-outlined">delete</span>           
+                                    </button>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </div>
+                    <a href="login.html" class="btn btn-light">
+                        <span class="material-symbols-outlined">logout</span> 
+                        Sair
+                    </a>
+                </section>
+            </main>
+        </div>
+        <script src="assets/js/index.js"></script>
+    </body>
+</html>

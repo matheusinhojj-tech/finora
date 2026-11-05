@@ -1,0 +1,42 @@
+@import url('base.css');
+
+img {
+    width: 140px;
+}
+
+#content {
+    min-height: 100%;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f6f8;
+}
+
+section {
+    width: 380px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    border: 2px solid #e4e7ec;
+    box-shadow: #0000001a 0px 10px 50px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+h1, p {
+    margin: 8px 0;
+}
+
+h1 {
+    font-size: 25px;
+    color: #202020;
+}
+
+p {
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: #74767a;
+    text-align: justify;
+}

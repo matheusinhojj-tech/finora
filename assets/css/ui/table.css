@@ -1,0 +1,27 @@
+table {
+    width: 100%;
+    font-size: 15px;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 20px 8px;
+    text-align: left;
+    white-space: now rape;
+}
+
+tr {
+    border-bottom: 2px solid #e7e7e7;
+}
+
+tr:last-child {
+    border: none;
+}
+
+.cell-sm {
+    width: 50px;
+}
+
+.cell-md {
+    width: 150px;
+}
